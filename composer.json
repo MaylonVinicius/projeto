@@ -1,0 +1,12 @@
+{
+    "autoload":{
+        "psr-4":{
+            "system\\":"app/lib/system",
+            "system\\mvc\\":"app/lib/system/mvc",
+            "sysadmin\\":"app/lib/sysadmin"
+        }
+    },
+    "require": {
+        "smarty/smarty": "3.1.30"
+    }
+}

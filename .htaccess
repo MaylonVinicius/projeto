@@ -1,0 +1,14 @@
+RewriteEngine On
+Options -Indexes
+#RewriteCond %{REQUEST_FILENAME} !-f
+
+#RewriteCond %{HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+RewriteRule ^admin/login$														app/public/index.php?page=loginPage
+
+<files ~ "^.*\.([Hh][Tt][Aa])">
+    order allow,deny
+    deny from all
+    satisfy all
+</files>
