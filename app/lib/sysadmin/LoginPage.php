@@ -8,16 +8,12 @@ class LoginPage extends PageController
 {
     public function __construct()
     {
-//        if(HelperAdmin::getSession())
-//            echo "esta logado";
-//        else
-//            echo "nao esta logado";
-        $smart = new \Smarty();
-        $smart->setTemplateDir("../template/");
-        $smart->assign("teste", "testeConcluido");
-		$smart->assign("tt", "outroTeste");
-		$smart->assign("pt", "Vai dar pt");
-		$smart->assign("g", "Vamos Viver");
-        $smart->display("LoginPage.tpl");
+        parent::__construct($this);
+
+        $this->values();
+        $this->display($this);
+    }
+    public function values(){
+        $this->view->getSmarty()->assign("saudacao", "Boa Noite");
     }
 }

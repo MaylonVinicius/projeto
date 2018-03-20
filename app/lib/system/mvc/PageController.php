@@ -2,31 +2,30 @@
 
 namespace system\mvc;
 
+use system;
+
 class PageController extends Controller{
 
     /**
      * @var View
      */
-    private $view;
+    protected $view;
 
     private $title;
 
     private $subTitle;
 
-    /**
-     * @return View
-     */
-    public function getView()
+
+    public function __construct($class)
     {
-        return $this->view;
+        $this->view = new View();
+        $this->view->getSmarty()->setTemplateDir("../template/".getNameNamespace($class));
+        $this->view->getSmarty()->setCompileDir("../../tmp/templates_c");
     }
 
-    /**
-     * @param View $view
-     */
-    public function setView(View $view)
+    public function display($class)
     {
-        $this->view = $view;
+        $this->view->getSmarty()->display(getNameClass($class).".tpl");
     }
 
     /**

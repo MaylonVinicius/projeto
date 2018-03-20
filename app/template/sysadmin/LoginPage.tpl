@@ -13,8 +13,7 @@ body{
 </style>
 </head>
 <body>
-<H1>{$teste}</H1>
-<h2>{$tt}</h2>
+<H1>{$saudacao}</H1>
 
 </body>
 </html>

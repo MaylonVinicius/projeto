@@ -2,7 +2,7 @@
 
 namespace system\mvc;
 
-abstract class View{
+class View{
 
     private $compileDir = "";
 
@@ -13,6 +13,11 @@ abstract class View{
      * @var \Smarty
      */
     private $smarty;
+
+    public function __construct()
+    {
+        $this->smarty = new \Smarty();
+    }
 
     public function assign($name, $value)
     {
@@ -71,7 +76,6 @@ abstract class View{
      */
     public function getSmarty()
     {
-        if(!$this->smarty) $this->smarty = new \Smarty();
         return $this->smarty;
     }
 
