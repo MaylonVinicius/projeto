@@ -1,7 +1,6 @@
 RewriteEngine On
 Options -Indexes
 
-sa
 #RewriteCond %{REQUEST_FILENAME} !-f
 
 #RewriteCond %{HTTPS} !on
