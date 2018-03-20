@@ -8,5 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'system\\mvc\\' => array($baseDir . '/app/lib/system/mvc'),
     'system\\' => array($baseDir . '/app/lib/system'),
+    'sysnegocio\\' => array($baseDir . '/app/lib/sysnegocio'),
+    'syshtml\\' => array($baseDir . '/app/lib/syshtml'),
     'sysadmin\\' => array($baseDir . '/app/lib/sysadmin'),
 );

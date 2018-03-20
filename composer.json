@@ -3,10 +3,13 @@
         "psr-4":{
             "system\\":"app/lib/system",
             "system\\mvc\\":"app/lib/system/mvc",
-            "sysadmin\\":"app/lib/sysadmin"
+            "sysadmin\\":"app/lib/sysadmin",
+            "syshtml\\":"app/lib/syshtml",
+            "sysnegocio\\":"app/lib/sysnegocio"
         }
     },
     "require": {
-        "smarty/smarty": "3.1.30"
+        "smarty/smarty": "3.1.30",
+        "kint-php/kint": "^2.2"
     }
 }

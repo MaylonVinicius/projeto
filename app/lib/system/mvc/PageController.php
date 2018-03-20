@@ -19,8 +19,10 @@ class PageController extends Controller{
     public function __construct($class)
     {
         $this->view = new View();
+        $this->view->getSmarty()->setTemplateDir("../template/syshtml");
+        $this->view->getSmarty()->setCompileDir($_SERVER['DOCUMENT_ROOT'] . "/tmp/templates_c");
+        $this->view->getSmarty()->display("InitialTag.tpl");
         $this->view->getSmarty()->setTemplateDir("../template/".getNameNamespace($class));
-        $this->view->getSmarty()->setCompileDir("../../tmp/templates_c");
     }
 
     public function display($class)

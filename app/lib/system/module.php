@@ -30,3 +30,7 @@ function getNameNamespace($class) {
     $path = explode('\\', $namespace);
     return $path[0];
 }
+
+function dd($var){
+    Kint::dump($var);
+}
