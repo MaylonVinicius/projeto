@@ -2,7 +2,7 @@
 
 namespace sysadmin;
 
-class NegocioAdmin{
+class Login{
 
-
+    
 }
